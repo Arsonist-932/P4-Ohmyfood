@@ -1,0 +1,117 @@
+.menu-card{
+    &-plate{
+        position: relative;
+        width: 100%;
+        
+        &:nth-last-child(1){animation: card-appear 4s ease; }  
+        &:nth-last-child(2){animation: card-appear 3s ease;}
+        &:nth-last-child(3){animation: card-appear 2s ease;}
+        &:nth-last-child(4){animation: card-appear 1.7s ease;}
+
+        &-checkbox{display: none;}
+
+        &-label{
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: $white;
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            border-radius: 15.0431px;
+            width: 349px;
+            height: 69px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            padding: 15px;
+            gap: 5px;
+        }
+
+        &-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 5px;
+            width: 287px;
+            height: 42px;
+
+            h3{
+                width: 287px;
+                min-height: 21px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            p{
+                width: 287px;
+                min-height: 19px;
+                font-weight: 300;
+                font-size: 15.0431px;
+                line-height: 18px;
+            }
+        }
+
+        &-price{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;            
+            transform: translateX(0);
+            transition: transform 750ms ease;
+            
+            width: 27px;
+            height: 18px;
+            
+            p{
+                width: 18px;
+                height: 18px;
+                font-weight: 700;
+                font-size: 15.0431px;
+                line-height: 18px;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                color: #353535;
+            }
+        }
+
+        &-checked{
+            background: $green-secondary;
+            position: absolute;
+            top: 0;
+            right: -60px;
+            /* Display */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Size */
+            min-width: 59px;
+            height: 69px;
+            /* Border */
+            border-radius: 0px 15px 15px 0px; 
+            transform: translateX(0);
+            transition: transform 750ms ease;
+        }
+
+        &-checkbox:checked + &-label{
+            .menu-card-plate-title h3, .menu-card-plate-title p{
+                width: 80%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .menu-card-plate-price{
+                transform: translateX(-50px);
+                transition: transform 750ms ease;
+            }
+            .menu-card-plate-checked{
+                transform: translateX(-60px);
+                transition: transform 750ms ease;
+            }
+
+        }
+    }   
+}

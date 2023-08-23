@@ -1,0 +1,28 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/** BASE **/
+body{
+    font-family: $font-body;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Section */
+.bg-section{background: $white-secondary;}
+/* Color Icon */
+.fa-grey{color: $grey-secondary;}
+.fa-purple{color: $primary-color;}
+.fa-white{color: $white;}  
+
+#content {
+    position: relative;
+    animation: content-appear 6.5s ease-in-out both;
+}

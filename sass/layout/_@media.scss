@@ -1,0 +1,105 @@
+/******* MEDIA QUERIES **********/
+@media (min-width: 549.98px) {
+        /*** Menu Pages ***/
+        .menu{
+            &-card{
+                width: 70%; 
+                
+                &-content, &-content1{
+                    width: 100%;
+                }
+
+                &-plate{
+                    &-label{
+                        width: 98%;
+                    }
+
+                    &-title{
+                        width: 98%;
+                    }
+                }
+            }
+        }
+    
+}
+
+@media (min-width: 767.98px){
+        /* Restaurant */
+    .restaurant{      
+        &-content{
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-bottom: 35px;
+        }
+    } 
+
+    /*** Footer ***/
+    .footer-content{
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        height: 114px;
+        gap: 35px;
+
+        &-list{
+            flex-direction: row;
+            gap: 20px;
+
+            &-link{
+                flex-direction: row;
+                gap: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    /*** Homepage ***/
+        /* Functionning */
+     .functionning{
+        padding: 50px 180px;
+        margin: 0;
+
+        ol{
+            flex-direction: row;
+        }
+    }
+
+        /* Restaurant */
+    .restaurant{
+        padding: 0 180px;
+        
+        &-content{
+            justify-content: space-around;
+        }
+
+        .card{width: 490px;}        
+    }
+
+    /*** Menu Pages ***/
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin-top: 22em;
+
+        &-img{
+            img{
+                height: 383px;
+            }
+        }
+
+        &-content{
+            width: 1055px;  
+        }
+    }
+    
+
+
+    /*** Footer ***/
+    .footer-content{
+        gap: 50px;
+
+        h3{padding: 10px 50px;}      
+
+        &-list{gap: 30px;}
+    }
+}

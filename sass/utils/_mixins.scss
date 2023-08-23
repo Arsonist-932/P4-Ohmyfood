@@ -1,0 +1,29 @@
+// LINEAR GRADIENT
+@mixin linear-gradient($degree, $color1, $color2) {
+    background: linear-gradient($degree, $color1 0%, $color2 100%);
+}
+
+//ELIPSE
+@mixin elipse($color: $color,$width, $height){
+    /* Form */
+    width: $width;
+    height: $height;
+    border-radius: 15px;
+    /* Color */
+    color: $white;
+    background: $color;
+}
+
+//BAGDE
+@mixin badges($width, $height){
+    background: $green-secondary;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;  
+    width: $width;
+    height: $height;
+    /* Font */
+    color: $green;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    }

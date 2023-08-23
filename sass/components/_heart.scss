@@ -1,0 +1,11 @@
+/* Heart Component */
+.fa-empty{
+    z-index: 10;
+    opacity: 1;
+}
+
+.fa-full{
+    color: $primary-color;
+    z-index: 5;
+    opacity: 0;
+}

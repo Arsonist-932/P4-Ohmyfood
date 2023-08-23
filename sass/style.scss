@@ -1,0 +1,23 @@
+//VARIABLES & MIXIN
+@import "./utils/variables";
+@import "./utils/mixins";
+
+//BASE 
+@import "./bases/typology";
+
+//COMPONENTS
+@import "./components/loader";
+@import "./components/heart";
+@import "./components/button";
+@import "./components/function";
+@import "./components/card";
+@import "./components/plates";
+ 
+//LAYOUT
+@import "./layout/header";
+@import "./pages/home";
+@import "./pages/menu";
+@import "./layout/footer";
+
+@import "./layout/@media";
+@import "./utils/animations";
