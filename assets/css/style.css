@@ -594,6 +594,10 @@ body {
 }
 
 /* footer */
+.fa-handshake {
+  transform: rotateZ(-33deg);
+}
+
 .footer-content {
   /* Display */
   display: flex;
