@@ -32,4 +32,3 @@ Contraintes :
     Pas de framework
     Pas de javascript
     Pas de CSS sur le HTML
-# P4-Ohmyfood

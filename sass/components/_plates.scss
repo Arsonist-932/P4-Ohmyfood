@@ -1,117 +1,167 @@
 .menu-card{
-    &-plate{
-        position: relative;
-        width: 100%;
-        
-        &:nth-last-child(1){animation: card-appear 4s ease; }  
-        &:nth-last-child(2){animation: card-appear 3s ease;}
-        &:nth-last-child(3){animation: card-appear 2s ease;}
-        &:nth-last-child(4){animation: card-appear 1.7s ease;}
+    margin: 25px 0;
 
-        &-checkbox{display: none;}
+    &-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &-plate{
+        display: flex;
+        flex-direction: column;
+
+
+
+        &-title{
+            height: 35px;
+            animation: plate-appear 2s ease;
+
+            h2{
+                position: relative;
+                /* Display */
+                display: flex;
+                align-items: center;
+                /* FONT */
+                font-weight: 300;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: $black;
+                
+                &::after{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 30px;
+                    height: 20px;
+                    /* Border */ 
+                    border: 2px solid transparent;
+                    border-bottom: 2px solid $green-secondary;
+                }
+            }
+        }
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &-checkbox{
+            @extend .card-heart-checkbox;
+        }
 
         &-label{
             position: relative;
             overflow: hidden;
-            cursor: pointer;
-            background: $white;
-            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-            border-radius: 15.0431px;
-            width: 349px;
-            height: 69px;
+            /* Display */ 
             display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            padding: 15px;
-            gap: 5px;
-        }
-
-        &-title{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 0px;
-            gap: 5px;
-            width: 287px;
-            height: 42px;
-
-            h3{
-                width: 287px;
-                min-height: 21px;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 21px;
-            }
-
-            p{
-                width: 287px;
-                min-height: 19px;
-                font-weight: 300;
-                font-size: 15.0431px;
-                line-height: 18px;
-            }
-        }
-
-        &-price{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 0px;            
-            transform: translateX(0);
-            transition: transform 750ms ease;
-            
-            width: 27px;
-            height: 18px;
-            
-            p{
-                width: 18px;
-                height: 18px;
-                font-weight: 700;
-                font-size: 15.0431px;
-                line-height: 18px;
-                display: flex;
-                align-items: flex-end;
-                text-align: center;
-                color: #353535;
-            }
-        }
-
-        &-checked{
-            background: $green-secondary;
-            position: absolute;
-            top: 0;
-            right: -60px;
-            /* Display */
-            display: flex;
-            justify-content: center;
             align-items: center;
             /* Size */
-            min-width: 59px;
+            width: 349px;
             height: 69px;
-            /* Border */
-            border-radius: 0px 15px 15px 0px; 
-            transform: translateX(0);
-            transition: transform 750ms ease;
+            padding: 15px;
+            /* Font */
+            background: $white;
+            border-radius: 15.0431px;
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            animation: card-appear 7.5s ease;
+
+            &:nth-last-of-type(4) {
+                animation: card-appear 2.5s ease;
+            }
+            &:nth-last-of-type(3) {
+                animation: card-appear 3.5s ease;
+            }
+            
+            &:nth-last-of-type(2){
+                animation: card-appear 4.5s ease;
+            }
+
+            &:nth-last-of-type(1) {
+                animation: card-appear 5.5s ease;
+            }
+
+            &-title{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 90%;
+            }
+
+    
+            &-h3{
+                /* Font */
+                font-weight: 500;
+                font-size: 18px;
+                /* Size */
+                width: 100%;
+                min-height: 21px;
+            }
+
+            &-p{
+                font-size: 15.0431px;
+                font-weight: 300;
+                /* Size */
+                min-height: 19px;
+            }
+
+            &-price{
+                width: 22px;
+                height: 42px;
+                /* Display */
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;         
+                /* Font */
+                font-size: 15.0431px;
+                font-weight: 700;
+                line-height: 18px;
+                color: $grey;
+                /* Transform */
+                transform: translateX(0);
+                transition: transform 750ms ease;
+            }
+
+            &-checked{
+                background: $green-secondary;
+                position: absolute;
+                top: 0;
+                right: -60px;
+                /* Display */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* Size */
+                min-width: 59px;
+                height: 69px;
+                /* Border */
+                border-radius: 0px 15px 15px 0px;
+                /* Transform */
+                transform: translateX(0);
+                transition: transform 750ms ease;
+            }
         }
 
         &-checkbox:checked + &-label{
-            .menu-card-plate-title h3, .menu-card-plate-title p{
-                width: 80%;
+            .menu-card-plate-label-h3, .menu-card-plate-label-p{
+                width: 79%;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
             }
 
-            .menu-card-plate-price{
-                transform: translateX(-50px);
+            .menu-card-plate-label-price{
+                transform: translateX(-49px);
                 transition: transform 750ms ease;
             }
-            .menu-card-plate-checked{
+            .menu-card-plate-label-checked{
                 transform: translateX(-60px);
                 transition: transform 750ms ease;
             }
 
         }
-    }   
+    }
 }
