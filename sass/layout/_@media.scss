@@ -1,4 +1,51 @@
 /******* MEDIA QUERIES **********/
+@media (max-width: 374.98px){
+    .functionning{
+        &-content{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-list{width: 98%;}
+    }
+
+    .card{width: 98%;}   
+
+    /*** Menu Pages ***/
+    .menu{
+        &-content-title{
+            h1{ width: 95%;}
+        }        
+                   
+        &-card{
+            width:92%;
+                    
+            &-content{
+                width: 100%;
+            }
+
+            &-plate{
+                width: 100%; 
+        
+                &-label{
+                    width: 100%;
+
+                    &-h3, &-p{
+                        width: 95%;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                        
+                    &-title{
+                        width: 95%;
+                    }
+                }
+            }
+        }  
+    }
+}
+
 @media (min-width: 549.98px) {
     /*** Menu Pages ***/
     .menu-card{
