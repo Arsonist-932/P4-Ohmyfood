@@ -398,7 +398,7 @@ body {
   white-space: nowrap;
 }
 .menu-card-plate-checkbox:checked + .menu-card-plate-label .menu-card-plate-label-price {
-  transform: translateX(-49px);
+  transform: translateX(-60px);
   transition: transform 750ms ease;
 }
 .menu-card-plate-checkbox:checked + .menu-card-plate-label .menu-card-plate-label-checked {
