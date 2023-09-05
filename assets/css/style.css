@@ -101,7 +101,10 @@ body {
 }
 
 .fa-full {
-  color: #9356DC;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   z-index: 5;
   opacity: 0;
   animation: empty-heart 750ms ease;
